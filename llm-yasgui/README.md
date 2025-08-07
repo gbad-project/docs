@@ -1,14 +1,12 @@
 ## Feature
+Write a comment line on Line 1 to send the entire text area contents to the first available LLM.
+
 ```
 SELECT * WHERE {  # this query is executed routinely  <-- Line 1
     GRAPH ?g { ?s ?p ?o . }  # inline comments do not trigger an LLM call
 } LIMIT 10
 # This full-line comment would trigger and LLM call if it was on Line 1.
 ```
-
-## Feature
-
-Write a comment line on Line 1 to send the entire text area contents to the first available LLM.
 
 ### How it works
 - The LLM will interpret the *entire* text area contents as a prompt and try to generate the best matching SPARQL query.
