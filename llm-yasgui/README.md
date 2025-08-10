@@ -1,5 +1,5 @@
 ## Feature
-Write a comment line on Line 1 to send the entire text area contents to the first available LLM.
+Write a comment line on Line 1 to send the entire text area contents to the first available large language model (LLM).
 
 ```sparql
 SELECT * WHERE {  # this is not a full-line comment  <-- Line 1
@@ -10,7 +10,7 @@ SELECT * WHERE {  # this is not a full-line comment  <-- Line 1
 
 ### How it works
 - The LLM will interpret the *entire* text area contents as a prompt and try to generate the best matching SPARQL query.
-- Other comments do not trigger and LLM call but are included in the LLM prompt if Line 1 is also commented out.
+- Other comments do not trigger an LLM call but are included in the LLM prompt if Line 1 is also commented out.
 - A single natural-language comment on Line 1 is sufficient to execute the request; other lines are optional.
 - After the LLM returns its response, it will be executed automatically against the quadstore.
 - If this fails or there are no LLMs available at the moment, an error message will appear on the `Response` tab.
